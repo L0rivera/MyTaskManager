@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+
+
+* {
+    font-family: "Cabin", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+body {
+  background-color: #d8f3dc;
+  height: 100dvh;
+}
+
+/* HEAD SECTION */
+
+.Header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    margin: 0 5px 0 5px;
+    font-size: 22px;
+}
+
+/* END HEAD */
+
+/* TEXT SECTION */
+
+.input-box {
+  background-color: #d8f3dc;
+}
+
+.input-date {
+  text-decoration: none;
+}
+
+.task {
+  display: block;
+  padding: 10px;
+  margin: 10px;
+  background-color: #d8f3dc;
+  border: none;
+  outline: none;
+}
+
+/* END TEXT */
+
+/* FOOTER SECTION */
+
+.foot {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+/* DROP DOWN MENU */
+.dropdown-menu-t {
+    position: fixed;
+    bottom: 0; /* Muestra el menú debajo de la foto de perfil */
+    right: 0px;
+    width: 100%;
+    height: 30%;
+    background-color: #d8f3dc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    display: none; /* Ocultar el menú por defecto */
+    z-index: 1000; /* Capa superior para superponer otros elementos */
+    overflow-y: auto;
+}
+
+/* Ajuste para la lista del menú desplegable */
+.dropdown-menu-t .dropdown-list-t {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu-t .dropdown-list-t li {
+    padding: 10px;
+}
+
+.a-dropmenu-t {
+    color:#000;
+    margin-left: 5px;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.drop-li-t {
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+}
+
+.drop-li-t:hover {
+    background-color: #ccc;
+}
+
+.menu {
+    position: relative; /* Contenedor relativo para posicionar elementos absolutos */
+}
+
+.menu:hover .dropdown-menu-t {
+    display: block; /* Mostrar el menú desplegable al pasar el mouse por encima */
+}
+/* END FOOTER */

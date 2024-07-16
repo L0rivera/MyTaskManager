@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fira+Mono:wght@400;500;700&family=Mrs+Sheppards&display=swap');
+
+* {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+section {
+    width: 100dvw;
+    height: 100dvh;
+}
+
+section {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 375px;
+}
+
+.main-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gray;
+    border-radius: 15px;
+    height: 600px;
+    width: 375px;
+}
+
+.form-div {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 100px;
+    margin-bottom: 350px;
+}
+
+.input {
+    width: 325px;
+    height: 40px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid gray;
+}
+
+.label {
+    font-size: 14px;
+}
+
+.signup-btn {
+    width: 330px;
+    height: 45px;
+    border: none;
+    border-radius: 25px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.regist {
+    margin-top: 15px;
+    color: white;
+    background-color: #adb5bd;
+}
+
+.google {
+    border: 1px solid gray;
+    color: #000;
+    background-color: white;
+}
+
+.h2 {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.or {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .main-container {
+       
+        border: none;
+        max-width: 90%;
+        
+    }
+
+    .input, .signup-btn {
+        max-width: 100%;
+    }
+}

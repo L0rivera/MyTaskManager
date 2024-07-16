@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS AND STYLES REFERENCES -->
+    <link rel="stylesheet" href="../../Public/css/nav-bar.css">
+    <link rel="stylesheet" href="../../Public/css/Project.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="../../Public/css/Forms-create/Form-section.css">
+
+    <!-- JS FILES -->
+    <script src="./../../Public/js/jquery.min.js"></script>
+
+    <title>Project</title>
+</head>
+<body>
+    <header class="header" id="header-nav">
+        <div class="header-menu">
+            <div class="exit-title">
+            <a href="../../index.html"><i class='bx bx-chevron-left i-exit'></i></a>
+            <h3 class="Name-p">Nombre del Proyecto</h3>
+            </div>
+            <div class="noti-menu">
+                <i class='bx bx-menu-alt-right' ></i>
+                 <div class="dropdown-menu-p" id="dropdown-menu-s">
+                    <ul class="dropdown-list-p">
+                        <li class="drop-li-p" id="add-i"><img src="../../Public/img/layer-add-stroke-rounded.svg" alt=""><a class="a-dropmenu-p" href="#">Add Section</a></li>
+                        <li class="drop-li-p" id="config-i"><img src="../../Public/img/settings-01-stroke-rounded.svg" alt=""><a class="a-dropmenu-p" href="#">Configuración</a></li>
+                        <li class="drop-li-p" id="noti-i"><img src="../../Public/img/notification-01-stroke-rounded.svg" alt=""><a class="a-dropmenu-p" href="#">Notifications</a></li>
+                         <li class="drop-li-p" id="Invite-i"><img src="../../Public/img/add-team-stroke-rounded.svg" alt=""><a class="a-dropmenu-p" href="#">Invite</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <nav class="nav container" id="nav-id">
+            <div class="nav_menu" id="nav-menu"></div>
+        </nav>
+    </header>
+    <div class="main-container">
+        <div class="main" id="taskstate">
+            <section class="main-section" id="example1">
+            <!-- <div class="task-section">
+                <h1>sss</h1>
+                <a href="./Task.html"><i class='bx bx-plus'></i></a>
+                </div><div class="task">
+            <div class="taskT">
+                        <h3>Task title</h3>
+                    </div>
+                    <div class="importance"></div> 
+                    </div> -->
+                    </section>
+        </div>
+    </div>
+
+    <!-- MODAL -->
+        
+    <div id="modal-container-s" class="modal hidden">
+        <div class="modal-content">
+            <div class="container">
+                <div class="title-p">
+                    <h1>Create a Section</h1>
+                </div>
+                <div class="form-p">
+                    <form class="create-prj" id="create-sect">
+                        <input class="input name" type="text" id="name-s" name="name" placeholder="Section's name...">
+                        <div class="buttons">
+                            <button type="button" class="btn Cancel">Cancel</button>
+                            <button type="submit" class="btn Create">Create</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS FILES -->
+     <script src="../../api/CreateP.js" type="module"></script>
+     <script src="../../Public/js/Modal/modal.js"></script>
+     <script src="../../api/CreateS.js" type="module"></script>
+     <script src="../../Public/js/PartialView/PartialView.js"></script>
+     <!-- jsDelivr :: Sortable :: Latest (https://www.jsdelivr.com/package/npm/sortablejs) -->
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+<script>
+    new Sortable(taskstate, {
+    animation: 150,
+    ghostClass: 'blue-background-class'
+});
+
+</script>
+     <script>
+          const render_nav_bar = '#nav-menu';
+        loadPartialView('../Components/nav-bar', document.querySelector(render_nav_bar));
+     </script>
+</body>
+</html>

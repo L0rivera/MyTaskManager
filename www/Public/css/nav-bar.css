@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* VARIABLES CSS */
+:root {
+    --header-height: 3rem;
+
+
+/* COLORS */
+--hue: 174;
+--sat: 63%
+
+--first-color: hsl(var(--hue), var(--sat), 40%);
+--first-color-alt: hsl(var(--hue), var(--sat), 36%);
+--title-color: hsl(var(--hue), 12%, 15%);
+--text-color: hsl(var(--hue), 8%, 35%);
+--body-color: hsl(var(--hue), 100%, 99%);
+--container-color: #fff;
+
+/* FONT */
+
+--body-font: 'Open Sans', sans-serif;
+
+--h1-font-size: 1.5rem;
+--normal-font-size: .938rem;
+--tiny-font-size: .625rem;
+
+/* Z INDEX */
+
+--z-tooltip: 10;
+--z-fixed: 100;
+}
+
+/* RESPONSIVE */
+
+@media screen and (min-width: 968px) {
+    :root {
+        --h1-font-size: 2.5rem;
+        --normal-font-size: 1rem;
+    }
+}
+
+/* BASE */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: var(--header-height) 0 0 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* REUSABLE CSS */
+
+
+
+/* LAYOUT */
+
+.container {
+    max-width: 968px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/* HEADER */
+
+.header {
+    position: fixed;
+    height: 48px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffd6ff;
+    z-index: var(--z-fixed);
+    transition: .4s;
+}
+
+/* NAV */
+
+.nav {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_img {
+    width: 32px;
+    border-radius: 50%;
+}
+
+.nav_logo {
+    color: var(--title-color);
+    font-weight: 600;
+}
+
+@media  screen and (max-width: 767px) {
+    .nav_menu {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background-color: var(--container-color);
+        box-shadow: 0 -1px 12px hsl(var(--hue), var(--sat), 15%, 0.15);
+        width: 100%;
+        height: 4rem;
+        padding: 0 1rem;
+        display: grid;
+        align-content: center;
+        border-radius: 1.25rem 1.25rem 0 0;
+        transition: .4s;
+
+    }
+}
+
+.nav_list,
+.nav_link {
+    display: flex;
+}
+
+.nav_link {
+    flex-direction: column;
+    align-items: center;
+    row-gap: .25rem;
+    color: var(--title-color);
+    font-weight: 600;
+}
+
+.nav_list {
+    justify-content: space-around;
+}
+
+.nav_name {
+    font-size: var(--tiny-font-size);
+    /* display: none; */
+}
+
+.nav_icon {
+    font-size: 1.5rem;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 320px) {
+    .nav_name {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .nav_list {
+        justify-content: center;
+        column-gap: 3rem;
+    }
+}
+
+@media screen and  (min-width: 767px) {
+    body {
+        margin: 0;
+    }
+
+    .nav {
+        height: calc(var(--header-height) + 1.5rem);
+    }
+
+    .nav_img {
+        display: none;
+    }
+
+    .nav_icon {
+        display: none;
+    }
+
+    .nav_name {
+        font-size: var(--normal-font-size);
+    }
+
+    .nav_link:hover {
+        color: var(--first-color);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Ajuste para el menú desplegable */
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 10px); /* Muestra el menú debajo de la foto de perfil */
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    display: none; /* Ocultar el menú por defecto */
+    z-index: 1000; /* Capa superior para superponer otros elementos */
+    width: 200px; /* Ancho del menú desplegable */
+}
+
+/* Ajuste para la lista del menú desplegable */
+.dropdown-menu .dropdown-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu .dropdown-list li {
+    padding: 10px;
+}
+
+.a-dropmenu {
+    color:#000;
+    margin-left: 5px;
+}
+
+.drop-li {
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+}
+
+.drop-li:hover {
+    background-color: #ccc;
+}
+
+.profile-picture-container {
+    position: relative; /* Contenedor relativo para posicionar elementos absolutos */
+}
+
+.profile-picture-container:hover .dropdown-menu {
+    display: block; /* Mostrar el menú desplegable al pasar el mouse por encima */
+}

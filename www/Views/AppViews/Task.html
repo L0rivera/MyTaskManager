@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS AND STYLES -->
+     <link rel="stylesheet" href="../../Public/css/task.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+
+    <title>Task</title>
+</head>
+<body>
+    <header id="header"></header>
+   <section class="Main-container">
+       <div class="Header">
+            <i class='bx bxs-chevron-left'></i>
+            <img id="save-task" src="../../Public/img/download-04-stroke-rounded.svg" alt="">        
+       </div> 
+       <div class="text-area" id="text-area">
+              
+            <textarea id="task-title" class="task" placeholder="Title"></textarea>
+        <textarea id="task-description" class="task" placeholder="Description"></textarea>
+       </div>
+       <div class="foot">
+            <div class="menu">
+                <img id="toggle-menu" src="../../Public/img/dashboard-square-setting-stroke-rounded.svg" alt="">
+                  <div class="dropdown-menu-t" id="dropdown-menu-t">
+                    <ul class="dropdown-list-t">
+                        <li class="drop-li-t" id="delete-i"><img src="../../Public/img/delete-02-stroke-rounded.svg" alt=""><a class="a-dropmenu-t" href="#">Delete</a></li>
+                        <li class="drop-li-t" id="assign-i"><img src="../../Public/img/user-multiple-02-stroke-rounded.svg" alt=""><a class="a-dropmenu-t" href="#">Assign</a></li>
+                        <li class="drop-li-t" id="importance-i"><img src="../../Public/img/alert-circle-stroke-rounded.svg" alt=""><a class="a-dropmenu-t" href="#">Importance</a></li>
+                         <li class="drop-li-t" id="date-i"><img src="../../Public/img/notification-01-stroke-rounded.svg" alt=""><input type="datetime-local" name="" id="input-date"><a class="a-dropmenu-t" href="#">Set date</a></li>
+                    </ul>
+                </div>
+            </div>
+       </div>
+   </section> 
+
+   <!-- JS FILES -->
+   <script src="../../Public/js/toggle.js"></script>
+   <script src="../../api/CreateT.js"></script>
+
+</body>
+</html>

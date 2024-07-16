@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Cabin", sans-serif;
+}
+
+body, html {
+    height: 100%;
+    overflow-x: auto;
+}
+
+.main-container {
+    margin-top: 0;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: max-content;
+}
+
+.main-section {
+    background-color: #74C69D;
+    border-radius: 10px;
+    margin: 0 10px;
+    padding: 20px;
+    min-width: 300px;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.task-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    height: 50px;
+}
+
+.bx-plus {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.i-exit {
+    font-size: 30px;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    background-color: #D8F3DC;
+    border-radius: 7px;
+    margin: 5px;
+}
+
+.taskT h3 {
+    padding: 5px;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.importance {
+    background-color: #0BCC6B;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.header {
+    background-color: #fff;
+}
+
+.header-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.exit-title {
+    display: flex;
+    align-items: center;
+}
+
+.Name-p {
+    padding-bottom: 2.3px;
+    padding-left: 10px;
+}
+
+.noti-menu {
+    display: flex;
+    justify-content: flex-end;
+    width: 60px;
+    font-size: 25px;
+}
+
+
+
+
+
+/* DROP DOWN MENU */
+.dropdown-menu-p {
+    position: absolute;
+    top: calc(100% + 10px); /* Muestra el menú debajo de la foto de perfil */
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    display: none; /* Ocultar el menú por defecto */
+    z-index: 1000; /* Capa superior para superponer otros elementos */
+    width: 200px; /* Ancho del menú desplegable */
+}
+
+/* Ajuste para la lista del menú desplegable */
+.dropdown-menu-p .dropdown-list-p {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu-p .dropdown-list-p li {
+    padding: 10px;
+}
+
+.a-dropmenu-p {
+    color:#000;
+    margin-left: 5px;
+    font-size: 15px;
+}
+
+.drop-li-p {
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+}
+
+.drop-li-p:hover {
+    background-color: #ccc;
+}
+
+.noti-menu {
+    position: relative; /* Contenedor relativo para posicionar elementos absolutos */
+}
+
+.noti-menu:hover .dropdown-menu-p {
+    display: block; /* Mostrar el menú desplegable al pasar el mouse por encima */
+}
